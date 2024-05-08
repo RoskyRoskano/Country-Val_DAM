@@ -1,6 +1,4 @@
 
-
-
 function Inicio(){
     return {
         view:()=>[
@@ -828,6 +826,7 @@ function NivelMedio () {
   }
 }
 
+
 const routes = {
   "/": {
       view: ()=> m(Inicio)
@@ -849,24 +848,3 @@ const routes = {
 //localhost/index.html#!nivelfacil
 
 m.route(document.body, "/", routes)
-
-function crearUsuario (nombre, correo){
-    const usuario = {
-        nombre: nombre,
-        correo: correo
-    }
-
-    m.request({
-        method: "POST",
-        url: "/api/usuarios/crear",
-        body: usuario
-    })
-    .then(response => {
-        console.log("Usuario creado correctamente: ", response)
-    })
-    .catch(error => {
-        console.log("Error al crear el usuario:", error)
-    })
-}
-
-crearUsuario("prueba", "prueba")
