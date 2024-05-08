@@ -1,3 +1,7 @@
+let usuarioconectado = false
+let usuario = "admin"
+let contrasena = "admin"
+
 
 function Inicio(){
     return {
@@ -43,13 +47,21 @@ function Inicio(){
                                    m("h2",
                                      "Selecciona nivel de dificultad"
                                    ),
-                                   m("button", {"class":"ui green inverted button btnnivelfacil"},
+                                   m("a", {
+                                        "href":"./index.html#!nivelfacil",
+                                        "class":"ui green inverted button btnnivelfacil",
+                                    },
                                      "Nivel Fácil"
                                    ),
-                                   m("button", {"class":"ui orange inverted button btnnivelmedio"},
+                                   m("a", {
+                                        "href":"./index.html#!nivelmedio",
+                                        "class":"ui orange inverted button btnnivelmedio"
+                                    },
                                      "Nivel Medio"
                                    ),
-                                   m("button", {"class":"ui red inverted button btnniveldificil"},
+                                   m("a", {
+                                        "href":"./index.html/#!niveldificil",
+                                        "class":"ui red inverted button btnniveldificil"},
                                      "Nivel Difícil"
                                    )
                                  ]
@@ -61,7 +73,7 @@ function Inicio(){
                            m("div", {"class":"ui center aligned segment"},
                              [
                                m("h2",
-                                 "Guía General"
+                                 "Ah General"
                                ),
                                m("h3",
                                  "Bienvenido a CountryVal aquí te explicamos las reglas generales del juego!"
@@ -226,7 +238,7 @@ function Login(){
                                           m("input", {"class":"passwd-inicio campo-sesion","type":"password","name":"passwd-incio","placeholder":"Contraseña","required":"required"}),
                                           m("br"),
                                           m("br"),
-                                          m("button", {"class":"btn-iniciar boton","name":"btn-iniciar"}, 
+                                          m("a", {"class":"btn-iniciar boton","name":"btn-iniciar"}, 
                                               "Iniciar Sesión"
                                           ),
                                           m("br"),
