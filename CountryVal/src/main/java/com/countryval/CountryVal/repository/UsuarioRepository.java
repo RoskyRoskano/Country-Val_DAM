@@ -1,8 +1,11 @@
-// package com.countryval.CountryVal.repository;
+package com.countryval.CountryVal.repository;
 
-// import org.springframework.data.jpa.repository.JpaRepository;
-// import com.countryval.CountryVal.model.Usuario;
+import com.countryval.CountryVal.model.Usuario;
+import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-// public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-    
-// }
+
+@Repository
+public interface UsuarioRepository extends JpaRepository<Usuario, String> {
+
+}
